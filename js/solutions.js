@@ -89,14 +89,40 @@
 
 // hint: discover the Pythagorean Theorem on a website called google.com
 // hint: checkout the Math methods in javascript
-	const calculateSide = (sideA, sideB) => {
-		let sideC = Math.hypot(sideA, sideB);
-		let cSquared = sideC * sideC;
-			if (cSquared = (sideA * sideA) + (sideB * sideB)) {
-				return [true, sideC]
-			} else {
-			return [false, sideC]
-		}
-	}
-	console.log(calculateSide(8, 6));
+
+	// Answer:
+	// const calculateSide = (sideA, sideB) => {
+	// 	let sideC = Math.hypot(sideA, sideB);
+	// 	let cSquared = sideC * sideC;
+	// 		if (cSquared = (sideA * sideA) + (sideB * sideB)) {
+	// 			return [true, sideC]
+	// 		} else {
+	// 		return [false, sideC]
+	// 	}
+	// }
+	// console.log(calculateSide(8, 6));
+
+//------------------------------------------------------------------------------
+//  Sum Array:
+//------------------------------------------------------------------------------
+// Write a function sumArray that takes an array as an argument. 
+// The array should contain numbers. 
+// The function should return the sum of the numbers in the array. 
+// Use a for loop within the function to iterate over the array and sum the contents. 
+// Use a variable such as: 
+	// let sum = 0;
+	// that will accumulate value within the loop. Expected result:
+
+	// console.log(sumArray([1, 2, 3, 4, 5, 6]));
+	// => 21
+
+	// Answer:
+		// const sumArray = (arr) => {
+		// 	let sum = 0;
+		// 	for (let i = 0; i < arr.length; i++) {
+		// 		sum += arr[i];
+		// 	}
+		// 	return sum;
+		// }
+		// console.log(sumArray([3, 5, 6, 7]));
 
