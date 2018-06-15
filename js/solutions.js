@@ -30,18 +30,38 @@
 // The function should return true (Boolean) if the string is a palindrome, false if it is not. 
 // Make sure your function will give the correct answer for words with capital letters.
 		
-		// Answer: 
-		// const checkPalindrome = (string) => {
-	 // 		let re = /[^A-Za-z0-9]/g;
-		// 	 string = string.toLowerCase().replace(re, '');
-		// 	 let len = string.length;
-		// 	 for (let i = 0; i < len/2; i++) {
-		// 	   if (string[i] !== string[len - 1 - i]) {
-		// 	       return false;
-		// 	   }
-		// 	 }
-		// 	 return true;
-		// 	}
-		// 	console.log(checkPalindrome("Race car"));
-		// 	console.log(checkPalindrome("NiTiN"));
-		// 	console.log(checkPalindrome("I love burritos"));
+	// Answer: 
+	// const checkPalindrome = (string) => {
+	// 		let re = /[^A-Za-z0-9]/g;
+	// 	 string = string.toLowerCase().replace(re, '');
+	// 	 let len = string.length;
+	// 	 for (let i = 0; i < len/2; i++) {
+	// 	   if (string[i] !== string[len - 1 - i]) {
+	// 	       return false;
+	// 	   }
+	// 	 }
+	// 	 return true;
+	// 	}
+	// 	console.log(checkPalindrome("Race car"));
+	// 	console.log(checkPalindrome("NiTiN"));
+	// 	console.log(checkPalindrome("I love burritos"));
+
+//------------------------------------------------------------------------------
+//  Digit Sum:
+//------------------------------------------------------------------------------
+
+// 1. Write a function sumDigits that accepts a number and returns the sum of its digits.
+	
+	// Answer:
+	const sumDigits = (number) => {
+		let total = 0;
+		numPlus = number.toString().split('');
+			for (let i = 0; i < numPlus.length; i++) {
+				let converted = parseInt(numPlus[i]);
+				total += converted;
+		}
+		return total;
+	}
+	console.log(sumDigits(810));
+
+	
