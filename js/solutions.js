@@ -32,17 +32,32 @@
 		
 	// Answer: 
 	// const checkPalindrome = (string) => {
-	// 		let re = /[^A-Za-z0-9]/g;
-	// 	 string = string.toLowerCase().replace(re, '');
-	// 	 let len = string.length;
-	// 	 for (let i = 0; i < len/2; i++) {
-	// 	   if (string[i] !== string[len - 1 - i]) {
-	// 	       return false;
-	// 	   }
+	// 	 let lowerCase = string.toLowerCase();
+	// 	 let reverseString = lowerCase.split('').reverse('').join('');
+	// 	 if (lowerCase === reverseString) {
+	// 	 	return true
+	// 	 } else {
+	// 	 	return false
 	// 	 }
-	// 	 return true;
 	// 	}
 	// 	console.log(checkPalindrome("Race car"));
+	// 	console.log(checkPalindrome("NiTiN"));
+	// 	console.log(checkPalindrome("I love burritos"));
+
+	// const checkPalindrome = (word) => {
+	// 	word = word.toLowerCase();
+	// 	for (let i = 0; i < word.length / 2; i++) {
+	// 	if (word[i] !== word[word.length - 1 - i]) {
+	// 		return false;
+	// 	}
+	// 	// const temp = word[i];
+	// 	// word[i] = word[word.length - 1 - i];
+	// 	// word[word.length - 1 - i] = temp;
+	// 	}
+	// 	return true;
+	// }
+
+	// 	console.log(checkPalindrome("Racecar"));
 	// 	console.log(checkPalindrome("NiTiN"));
 	// 	console.log(checkPalindrome("I love burritos"));
 
@@ -53,15 +68,35 @@
 // 1. Write a function sumDigits that accepts a number and returns the sum of its digits.
 	
 	// Answer:
-	const sumDigits = (number) => {
-		let total = 0;
-		numPlus = number.toString().split('');
-			for (let i = 0; i < numPlus.length; i++) {
-				let converted = parseInt(numPlus[i]);
-				total += converted;
-		}
-		return total;
-	}
-	console.log(sumDigits(810));
+	// const sumDigits = (number) => {
+	// 	let total = 0;
+	// 	numPlus = number.toString().split('');
+	// 		for (let i = 0; i < numPlus.length; i++) {
+	// 			let converted = parseInt(numPlus[i]);
+	// 			total += converted;
+	// 	}
+	// 	return total;
+	// }
+	// console.log(sumDigits(810));
 
-	
+
+//------------------------------------------------------------------------------
+//  Pythagoras:
+//------------------------------------------------------------------------------
+
+// Write a function calculateSide that takes two arguments: sideA and sideB, and 
+// returns the solution for sideC using the Pythagorean theorem.
+
+// hint: discover the Pythagorean Theorem on a website called google.com
+// hint: checkout the Math methods in javascript
+	const calculateSide = (sideA, sideB) => {
+		let sideC = Math.hypot(sideA, sideB);
+		let cSquared = sideC * sideC;
+			if (cSquared = (sideA * sideA) + (sideB * sideB)) {
+				return [true, sideC]
+			} else {
+			return [false, sideC]
+		}
+	}
+	console.log(calculateSide(8, 6));
+
