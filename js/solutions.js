@@ -141,29 +141,54 @@
 	// The function will return true (Boolean) if Prime, false if not. 
 	// Hint: Check every number up to the square root. To do this, try a for loop.
 
-		const checkPrime = (num) => {
-		  for (let i = 2; i < Math.sqrt(num); i++) {
-		    if (num % i === 0) {
-		      return false
-		    }
-		  }
-		  return true
-		}
-		console.log(checkPrime(3));	
+	// 	// Answer:
+	// 	const checkPrime = (num) => {
+	// 	  for (let i = 2; i < Math.sqrt(num); i++) {
+	// 	    if (num % i === 0) {
+	// 	      return false
+	// 	    }
+	// 	  }
+	// 	  return true
+	// 	}
+	// 	console.log(checkPrime(3));	
 
-	// Step Two
-	// Write another function called printPrimes that will print (console log) all the 
-	// // Primes up to an arbitrary limit. 
-	// For example, if you invoke your function with printPrimes(97), 
-	// it will print all the Prime numbers up to and including 97. 
-	// This function can call on the previous checkPrime function.
+	// // Step Two
+	// // Write another function called printPrimes that will print (console log) all the 
+	// // // Primes up to an arbitrary limit. 
+	// // For example, if you invoke your function with printPrimes(97), 
+	// // it will print all the Prime numbers up to and including 97. 
+	// // This function can call on the previous checkPrime function.
 
-		const printPrimes = (primes) => {
-			for (let x = 2; x <= primes; x++) {
-				if (checkPrime(x) === true) {
-				console.log(x);
-				}
-			}
-		}
-		printPrimes(12);
+	// 	// Answer:
+	// 	const printPrimes = (primes) => {
+	// 		for (let x = 2; x <= primes; x++) {
+	// 			if (checkPrime(x) === true) {
+	// 			console.log(x);
+	// 			}
+	// 		}
+	// 	}
+	// 	printPrimes(12);
+
+//------------------------------------------------------------------------------
+//  Insert Dash:
+//------------------------------------------------------------------------------
+
+	// Write a function insertDash that accepts a number as a parameter and returns a 
+	// string with a dash inserted between any consecutive odd numbers. 
+	// There should not be a dash at the end, it goes only between numbers.
+
+		// Answer:
+			const insertDash = (num) => {
+				const numDash = num.toString().split('');
+				for (let i = 0; i < numDash.length; i++) {
+  				  if ((numDash[i] % 2 === 1) && ((numDash[i + 1]) % 2 === 1)) { 
+						// numDash[i] = numDash[i] + '-'; 
+						numDash[i] = numDash[i] + '-';
+  	  				}
+  				}
+  				const numDashFinal = numDash.join('');
+  				return numDashFinal;
+  				}
+  				console.log(insertDash(23572877));
+
 
