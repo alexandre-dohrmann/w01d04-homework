@@ -105,6 +105,7 @@
 //------------------------------------------------------------------------------
 //  Sum Array:
 //------------------------------------------------------------------------------
+
 // Write a function sumArray that takes an array as an argument. 
 // The array should contain numbers. 
 // The function should return the sum of the numbers in the array. 
@@ -125,4 +126,44 @@
 		// 	return sum;
 		// }
 		// console.log(sumArray([3, 5, 6, 7]));
+
+//------------------------------------------------------------------------------
+//  Prime Numbers:
+//------------------------------------------------------------------------------
+
+// A Prime number is a number that is not evenly divisible by another number except 1 and itself. 
+// If you want to read more deeply about it, go here. 
+// To test whether a number is Prime, you only need to test as far as the square root of that number. 
+// This is advisable for optimization and testing large numbers.
+
+	// Step One
+	// Write a function called checkPrime that will test whether a number is Prime. 
+	// The function will return true (Boolean) if Prime, false if not. 
+	// Hint: Check every number up to the square root. To do this, try a for loop.
+
+		const checkPrime = (num) => {
+		  for (let i = 2; i < Math.sqrt(num); i++) {
+		    if (num % i === 0) {
+		      return false
+		    }
+		  }
+		  return true
+		}
+		console.log(checkPrime(3));	
+
+	// Step Two
+	// Write another function called printPrimes that will print (console log) all the 
+	// // Primes up to an arbitrary limit. 
+	// For example, if you invoke your function with printPrimes(97), 
+	// it will print all the Prime numbers up to and including 97. 
+	// This function can call on the previous checkPrime function.
+
+		const printPrimes = (primes) => {
+			for (let x = 2; x <= primes; x++) {
+				if (checkPrime(x) === true) {
+				console.log(x);
+				}
+			}
+		}
+		printPrimes(12);
 
